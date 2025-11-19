@@ -8,6 +8,7 @@ class Car:
         self.__direction = 0
         self.__velocity = [0, 0]
         self.__drag = 0.2
+        self.__prevPosition = [0, 0]
 
     #gets and sets
     def GetPosition(self):
@@ -21,6 +22,8 @@ class Car:
     def GetDirectionDegrees(self):
         radians = self.__direction * (180 / math.pi)
         return radians
+    def GetPrevPosition(self):
+        return self.__prevPosition
 
     def SetPosition(self, newPosition):
         if not isinstance(newPosition, list):
@@ -41,6 +44,7 @@ class Car:
         self.__velocity = newVelocity
 
     def SetPosition(self, newPosition):
+        self.__prevPosition = self.__position
         self.__position = newPosition
 
     def SetDirection(self, newDirection):
@@ -48,6 +52,7 @@ class Car:
             raise KeyError("Error, direction has to be a float")
         if newDirection > (2 * math.pi) or newDirection < 0:
             raise KeyError("Error, direction is in radians, must be between zero and 2 pie")
+        self.__direction = newDirection
 
     def SetDirectionDegrees(self, newDirection):
         if not isinstance(newDirection, float):
