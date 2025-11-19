@@ -3,8 +3,8 @@ import math
 
 class Simulation:
 
-    def __init__(self):
-        self.car = Car()
+    def __init__(self, car:Car):
+        self.car = car
         self.interval = 0.05
 
     def stepForward(self):
