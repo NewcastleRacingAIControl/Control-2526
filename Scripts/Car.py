@@ -32,6 +32,9 @@ class Car:
         # if (newVelocity):
         self.__velocity = newVelocity
 
+    def SetPosition(self, newPosition):
+        self.__position = newPosition
+
     def SetDirection(self, newDirection):
         if newDirection > (2 * math.pi) or newDirection < 0:
             print("Error, direction is in radians, must be between zero and 2 pie")
@@ -57,8 +60,8 @@ class Car:
         self.__position[1] += self.__velocity[1] * dt
 
     def PrintValues(self):
-        print("Car position: " + self.__position)
-        print("Car acceleration: " + self.__acceleration)
-        print("Car direction: " + self.__direction)
-        print("Car velocity: " + self.__velocity)
+        print("Car position: " + str(self.__position))
+        print("Car acceleration: " + str(self.__acceleration))
+        print("Car direction: " + str(self.__direction))
+        print("Car velocity: " + str(self.__velocity))
 

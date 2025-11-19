@@ -18,8 +18,9 @@ class Simulation:
 
         acc = [accX, accY]
 
-        pos = pos + (vel * self.interval) + (0.5*acc*math.pow(self.interval, 2))
-        vel = vel + acc * self.interval
+        #pos = pos + (vel * self.interval) + (0.5*acc*math.pow(self.interval, 2))
+        pos = [pos[0] + vel[0] * self.interval + 0.5*acc[0]*math.pow(self.interval, 2), pos[1] + vel[1] * self.interval + 0.5*acc[1]*math.pow(self.interval, 2)]
+        vel = [vel[0] + acc[0] * self.interval, vel[1] + acc[1] * self.interval]
 
         self.car.SetPosition(pos)
         self.car.SetVelocity(vel)
