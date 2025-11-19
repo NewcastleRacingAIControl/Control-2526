@@ -18,9 +18,9 @@ class Car:
         return self.__direction
     def GetVelocity(self):
         return self.__velocity
-    # def GetDirectionRadians(self):
-    #     radians = self.__direction * (math.pi / 180)
-    #     return radians
+    def GetDirectionDegrees(self):
+        radians = self.__direction * (180 / math.pi)
+        return radians
 
     def SetPosition(self, newPosition):
         self.__position = newPosition
@@ -39,7 +39,12 @@ class Car:
         if newDirection > (2 * math.pi) or newDirection < 0:
             print("Error, direction is in radians, must be between zero and 2 pie")
             return
-        
+
+    def SetDirectionDegrees(self, newDirection):
+        if newDirection > 360 or newDirection < 0:
+            print("Error, direction is in degrees, must be between 0 and 360")
+            return
+        self.__direction = newDirection * (math.pi / 180)
 
 
     # def Update(self, dt):
