@@ -16,7 +16,7 @@ class Car:
         return self.__acceleration
     def GetDirection(self):
         return self.__direction
-    def GetVelocit(self):
+    def GetVelocity(self):
         return self.__velocity
     # def GetDirectionRadians(self):
     #     radians = self.__direction * (math.pi / 180)
