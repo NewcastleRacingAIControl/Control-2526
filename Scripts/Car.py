@@ -57,6 +57,8 @@ class Car:
         self.__position[1] += self.__velocity[1] * dt
 
     def PrintValues(self):
-        pass
-
+        print("Car position: " + self.__position)
+        print("Car acceleration: " + self.__acceleration)
+        print("Car direction: " + self.__direction)
+        print("Car velocity: " + self.__velocity)
 
