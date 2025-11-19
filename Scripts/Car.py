@@ -40,6 +40,9 @@ class Car:
             raise KeyError("Error, velocity should be a list, [vx, vy]")
         self.__velocity = newVelocity
 
+    def SetPosition(self, newPosition):
+        self.__position = newPosition
+
     def SetDirection(self, newDirection):
         if not isinstance(newDirection, float):
             raise KeyError("Error, direction has to be a float")
@@ -77,9 +80,9 @@ class Car:
 
     def PrintValues(self):
         print("----------------------------------")
-        print("Car position: " + self.__position)
-        print("Car acceleration: " + self.__acceleration)
-        print("Car direction: " + self.__direction)
-        print("Car velocity: " + self.__velocity)
+        print("Car position: " + str(self.__position))
+        print("Car acceleration: " + str(self.__acceleration))
+        print("Car direction: " + str(self.__direction))
+        print("Car velocity: " + str(self.__velocity))
         print("----------------------------------")
 
