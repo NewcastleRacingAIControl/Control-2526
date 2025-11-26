@@ -1,0 +1,3 @@
+[submodule "eufs_sim"]
+path = eufs_sim
+url = https://github.com/xieyixian/newcastal_racingteam/eufs_sim.git
